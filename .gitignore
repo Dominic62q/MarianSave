@@ -6,12 +6,19 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+dev.out.log
+dev.err.log
 
 node_modules
 dist
 dist-ssr
 *.local
 nul
+src-tauri/target
+src-tauri/gen
+*.msi
+*-setup.exe
+*.pdb
 
 # Editor directories and files
 .vscode/*
