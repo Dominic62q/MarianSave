@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 33% 95%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 217 26% 95%;
+    --muted-foreground: 215 16% 46%;
+    --accent: 221 83% 53%;
+    --accent-foreground: 0 0% 100%;
+    --success: 158 64% 35%;
+    --success-foreground: 0 0% 100%;
+    --danger: 0 72% 51%;
+    --danger-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 221 83% 53%;
+    --sidebar: 222 47% 15%;
+    --sidebar-muted: 215 20% 78%;
+    --sidebar-accent: 221 30% 23%;
+  }
+
+  .theme-dark {
+    --background: 222 47% 8%;
+    --foreground: 210 40% 96%;
+    --card: 222 42% 11%;
+    --card-foreground: 210 40% 96%;
+    --primary: 213 94% 68%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 28% 16%;
+    --secondary-foreground: 210 40% 96%;
+    --muted: 217 28% 16%;
+    --muted-foreground: 215 20% 72%;
+    --accent: 213 94% 68%;
+    --accent-foreground: 222 47% 11%;
+    --success: 158 64% 44%;
+    --success-foreground: 210 40% 96%;
+    --danger: 0 84% 66%;
+    --danger-foreground: 210 40% 96%;
+    --border: 217 24% 20%;
+    --input: 217 24% 20%;
+    --ring: 213 94% 68%;
+    --sidebar: 222 42% 10%;
+    --sidebar-muted: 215 20% 70%;
+    --sidebar-accent: 217 28% 18%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply h-full scroll-smooth;
+  }
+
+  body {
+    @apply min-h-full bg-background text-foreground antialiased;
+    font-family:
+      "Plus Jakarta Sans",
+      "Segoe UI",
+      sans-serif;
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-foreground;
+  }
+
+  body,
+  #root {
+    transition:
+      background-color 180ms ease,
+      color 180ms ease;
+  }
+}
